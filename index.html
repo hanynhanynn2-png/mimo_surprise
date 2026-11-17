@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>A Little Surprise for You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="balloon balloon-one">🎈</div>
+  <div class="balloon balloon-two">🎈</div>
+  <div class="balloon balloon-three">♡</div>
+
+  <main class="page">
+    <section id="cake-screen" class="screen active">
+      <p class="eyebrow">A little moment made just for you</p>
+      <h1>A little surprise for you</h1>
+      <p class="intro">Make a wish, then tap the cake ♡</p>
+
+      <button class="cake-button" id="cake-button" aria-label="Tap the cake to blow out the candles">
+        <div class="candles">
+          <span class="candle"><i class="flame"></i></span>
+          <span class="candle"><i class="flame"></i></span>
+        </div>
+        <div class="cake cake-top"></div>
+        <div class="cake cake-middle"><span>♡</span></div>
+        <div class="cake cake-bottom"></div>
+        <div class="plate"></div>
+      </button>
+      <p class="hint" id="cake-hint">Tap the cake to make your wish ✨</p>
+    </section>
+
+    <section id="flower-screen" class="screen">
+      <p class="eyebrow">Your wish is in the air</p>
+      <div class="flowers" aria-hidden="true">🌷 🌸 🌷</div>
+      <h1>Sending you a little happiness</h1>
+      <p class="intro">I hope your day is as lovely as you are.</p>
+      <button class="main-button" id="open-letter">Open my letter 💌</button>
+    </section>
+
+    <section id="letter-screen" class="screen">
+      <p class="eyebrow">A letter from me to you</p>
+      <article class="letter">
+        <div class="letter-heart">♡</div>
+        <h1>To my favorite person</h1>
+        <p class="letter-text" id="letter-text">[Put your personal letter here. You can replace this text inside index.html.]</p>
+        <p class="signature">With all my love, ♡</p>
+      </article>
+      <button class="main-button replay-button" id="replay">Replay the surprise ↻</button>
+    </section>
+  </main>
+
+  <footer>Made with love ♡</footer>
+  <script src="script.js"></script>
+</body>
+</html>

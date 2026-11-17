@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+:root { --pink:#e99bb8; --deep:#a94e75; --pale:#fff0f5; --ink:#694454; }
+* { box-sizing:border-box; }
+body {
+  margin:0; min-height:100vh; overflow-x:hidden; color:var(--ink);
+  background: radial-gradient(circle at top, #fffafd 0, #fff0f5 55%, #fbe2ec 100%);
+  font-family:'DM Sans', sans-serif; display:flex; flex-direction:column;
+}
+.page { width:min(92%,680px); margin:auto; min-height:88vh; display:grid; place-items:center; padding:42px 0 24px; }
+.screen { display:none; width:100%; text-align:center; animation:fade .7s ease both; }
+.screen.active { display:block; }
+h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,7vw,3.2rem); font-weight:500; color:#9e5471; margin:10px 0 14px; }
+.eyebrow { text-transform:uppercase; letter-spacing:.18em; font-size:.72rem; color:#bd7893; }
+.intro { font-size:1rem; line-height:1.7; margin:0 auto 24px; }
+.hint { color:#a96d86; font-size:.9rem; margin-top:22px; }
+.cake-button { border:0; background:transparent; cursor:pointer; padding:12px 25px 0; position:relative; display:inline-flex; flex-direction:column; align-items:center; transition:transform .2s; }
+.cake-button:hover { transform:translateY(-4px); }
+.candles { height:76px; display:flex; align-items:flex-end; gap:34px; position:relative; z-index:2; }
+.candle { height:58px; width:13px; border-radius:5px 5px 2px 2px; display:block; background:repeating-linear-gradient(135deg,#fff 0 6px,#f2a9c2 6px 11px); position:relative; box-shadow:0 2px 5px #d68ca777; }
+.flame { position:absolute; width:14px; height:21px; background:linear-gradient(#fff6a8,#ffad45 75%,#f47d52); border-radius:70% 15% 70% 70%; transform:rotate(45deg); top:-23px; left:-1px; filter:drop-shadow(0 0 7px #ffbf68); animation:flicker .8s infinite alternate; }
+.flame.out { opacity:0; transform:scale(.2); transition:.35s; }
+.cake { width:min(66vw,290px); position:relative; }
+.cake-top { height:36px; background:#f7c9d8; border-radius:50%; border:3px solid #fff8fb; z-index:1; margin-bottom:-13px; }
+.cake-middle { height:48px; background:#f5b8cd; border-radius:12px 12px 18px 18px; border:3px solid #fff8fb; display:grid; place-items:center; color:#fff; font-size:1.6rem; }
+.cake-bottom { height:50px; background:#eaa0bc; border-radius:10px 10px 22px 22px; border:3px solid #fff8fb; margin-top:-2px; }
+.plate { width:min(78vw,340px); height:17px; border-radius:50%; background:#fff; box-shadow:0 7px 18px #d58da544; margin-top:-3px; }
+.main-button { border:0; border-radius:999px; padding:14px 25px; color:white; background:linear-gradient(135deg,#e9a2bd,#c87599); font:500 1rem 'DM Sans',sans-serif; box-shadow:0 8px 20px #d58da555; cursor:pointer; margin-top:14px; }
+.main-button:active { transform:scale(.98); }
+.flowers { font-size:clamp(3rem,12vw,5rem); margin:18px 0; animation:pop .8s ease both; }
+.letter { background:#fffafc; border:1px solid #f5d9e4; border-radius:22px; padding:clamp(22px,6vw,42px); text-align:left; box-shadow:0 14px 40px #c47b9820; }
+.letter-heart { text-align:center; color:#d783a4; font-size:2rem; }
+.letter h1 { text-align:center; font-size:2rem; }
+.letter-text { white-space:pre-wrap; line-height:1.9; font-size:1rem; }
+.signature { text-align:right; color:#b36c8a; font-family:'Playfair Display',serif; font-style:italic; }
+.balloon { position:fixed; font-size:2.4rem; opacity:.55; animation:float 5s ease-in-out infinite; pointer-events:none; }
+.balloon-one { left:6%; top:17%; } .balloon-two { right:7%; top:26%; animation-delay:1s; } .balloon-three { left:12%; bottom:13%; color:#e7a2bc; font-size:3rem; animation-delay:2s; }
+footer { text-align:center; color:#c18aa0; font-size:.75rem; padding:12px; }
+@keyframes fade { from {opacity:0; transform:translateY(12px)} to {opacity:1; transform:none} }
+@keyframes pop { 0% {opacity:0; transform:scale(.5)} 75% {transform:scale(1.12)} 100% {opacity:1; transform:scale(1)} }
+@keyframes float { 0%,100% {transform:translateY(0) rotate(-5deg)} 50% {transform:translateY(-18px) rotate(5deg)} }
+@keyframes flicker { from {transform:rotate(42deg) scale(.95)} to {transform:rotate(48deg) scale(1.06)} }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after {animation-duration:.01ms!important; transition-duration:.01ms!important;} }
